@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+</script>
+
+</head>
+<body>
+
+	<div class="header">
+		<h1>HTML, CSS, Javascript 10 Quizes</h1>
+		<div id="results">
+			<h2>YOUR SCORED: NOT YET ATTEMPED</h2>
+		</div>
+	</div>
+
+	<div class="body">
+		<form name="quiz" onsubmit="return onSubmit()">
+
+		<div class="question">
+			<h1>1. Client-side scripting language that allows developers to add interactive and dynamic functionality to an otherwise static HTML page</h1>
+			<input type="radio" name="q1" value="a">a. Java<br>
+			<input type="radio" name="q1" value="b">b. C++<br>
+			<input type="radio" name="q1" value="c">c. Python<br>
+			<input type="radio" name="q1" value="d">d. Javascript<br>			
+		</div>
+
+		<div class="question">
+			<h1>2.	Hyper Text Mark Up Language what provides the content to be displayed on the webpage</h1>
+			<input type="radio" name="q2" value="a">a. HTML<br>
+			<input type="radio" name="q2" value="b">b. HTML 5 canvas<br>
+			<input type="radio" name="q2" value="c">a.Compiling<br>
+			<input type="radio" name="q2" value="d">b. Operator<br>					
+		</div>	
+
+		<div class="question">
+			<h1>3.	Sets all the background properties in one declaration</h1>
+			<input type="radio" name="q3" value="a">a. background<br>
+			<input type="radio" name="q3" value="b">b. font-style<br>
+			<input type="radio" name="q3" value="c">a. background-image<br>
+			<input type="radio" name="q3" value="d">b. background-repeat<br>					
+		</div>	
+
+		<div class="question">
+			<h1>4.	They may only be true or false</h1>
+			<input type="radio" name="q4" value="a">a. background-color<br>
+			<input type="radio" name="q4" value="b">b. Boolean conditions<br>
+			<input type="radio" name="q4" value="c">c. background-image<br>
+			<input type="radio" name="q4" value="d">d. Booleans represent<br>			
+		</div>	
+
+		<div class="question">
+			<h1>5.	Specifies the font size of text</h1>
+			<input type="radio" name="q5" value="a">a. font-weight<br>
+			<input type="radio" name="q5" value="b">b. font-style<br>
+			<input type="radio" name="q5" value="c">c. font-size<br>
+			<input type="radio" name="q5" value="d">d. font-family<br>			
+		</div>
+
+		<div class="question">
+			<h1>6.  Sets all the font properties in one declaration</h1>
+			<input type="radio" name="q6" value="a">a. font-style<br>
+			<input type="radio" name="q6" value="b">b. font<br>
+			<input type="radio" name="q6" value="c">c. background<br>
+			<input type="radio" name="q6" value="d">d. font-size<br>			
+		</div>
+
+		<div class="question">
+			<h1>7.  What String object method is used to concatenate multiple strings?</h1>
+			<input type="radio" name="q7" value="a">a. toUpperCase();<br>
+			<input type="radio" name="q7" value="b">b. Math.min(var1, var2, varN);<br>
+			<input type="radio" name="q7" value="c">c. concat(var1, var2, varN);<br>
+			<input type="radio" name="q7" value="d">d. charAt(position);<br>			
+		</div>
+
+		<div class="question">
+			<h1>8.	How many looping statements are there in JavaScript?</h1>
+			<input type="radio" name="q8" value="a">a. 2. The "for" loop, and the "while" loop<br>
+			<input type="radio" name="q8" value="b">b. 3. The "for" loop, the "while" loop, and the "do...while" loop<br>
+			<input type="radio" name="q8" value="c">c. 4. The "for" loop, the "while" loop, the "do...while" loop, and the "loop...until" loop<br>
+			<input type="radio" name="q8" value="d">d. The "for" loop<br>			
+		</div>
+
+		<div class="question">
+			<h1>9. Used to set the size of the text</h1>
+			<input type="radio" name="q9" value="a">a. HTML<br>
+			<input type="radio" name="q9" value="b">b. anchor<br>
+			<input type="radio" name="q9" value="c">c. ordered list<br>
+			<input type="radio" name="q9" value="d">d. h1-h6<br>			
+		</div>
+
+		<div class="question">
+			<h1>10.  HTML Language uses</h1>
+			<input type="radio" name="q10" value="a">a. True<br>
+			<input type="radio" name="q10" value="b">b. Tags<br>
+			<input type="radio" name="q10" value="c">c. pairs<br>
+			<input type="radio" name="q10" value="d">d. false<br>			
+		</div>
+
+			<button type="submit">Submit Test</button>
+
+	</div>
+
+
+	<script>		
+		function onSubmit(){
+			var score=0;
+			var numOfQuestions = 10;
+			var ansArr = ['d', 'a', 'a', 'b', 'c', 'b', 'c', 'b', 'd', 'b'];
+
+			var q1 = document.forms['quiz']['q1'].value;
+			var q2 = document.forms['quiz']['q2'].value;
+			var q3 = document.forms['quiz']['q3'].value;
+			var q4 = document.forms['quiz']['q4'].value;
+			var q5 = document.forms['quiz']['q5'].value;
+			var q6 = document.forms['quiz']['q6'].value;
+			var q7 = document.forms['quiz']['q7'].value;
+			var q8 = document.forms['quiz']['q8'].value;
+			var q9 = document.forms['quiz']['q9'].value;
+			var q10 = document.forms['quiz']['q10'].value;
+
+			for (var i = 1; i <= numOfQuestions; i++){
+				if(eval('q' + i) == ''){
+					alert("you missed question number " + i);
+				}
+			}
+
+				for(var i = 1; i <= numOfQuestions; i++){
+					if (eval('q' + i) == ansArr[i - 1]){
+						score++;
+					}
+				}
+
+				var results = document.getElementById('results')
+				results.innerHTML="<h2>You Scored " + score + " points out of " + numOfQuestions +"</h2>"
+				alert('You Scored ' + score + ' out of ' + numOfQuestions);
+
+				return false;
+			} 	
+	</script>
+</body>
+</html>
